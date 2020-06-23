@@ -30,7 +30,7 @@ static NSString * const TAG = @"CDVBackgroundGeolocation";
 
     facade = [[MAURBackgroundGeolocationFacade alloc] init];
     facade.delegate = self;
-
+}
 
 
 /**
@@ -446,8 +446,8 @@ static NSString * const TAG = @"CDVBackgroundGeolocation";
 -(void) onFinishLaunching:(NSNotification *)notification
 {
     if (@available(iOS 10, *)) {
-        UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
-        center.delegate = self;
+//         UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+//         center.delegate = self;
     }
     
     NSDictionary *dict = [notification userInfo];
